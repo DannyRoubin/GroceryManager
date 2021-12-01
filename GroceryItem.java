@@ -1,13 +1,17 @@
 public abstract class GroceryItem implements Comparable {
-    private String name;
-    private int quantity;
-    private int price;
+    protected String name;
+    protected int quantity;
+    protected double price;
 
     public GroceryItem(String name, int quantity, double price) {
-
+        // reminder for self to make checkpoints to check for valid data
+        this.name = name;
+        this.quantity = quantity;
+        this.price = price;
     }
 
     public GroceryItem() {
+        
 
     }
 
@@ -28,23 +32,34 @@ public abstract class GroceryItem implements Comparable {
         this.quantity = quantity;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return this.price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
 
     @Override
     public String toString() {
-        return "{" +
-            " name='" + getName() + "'" +
-            ", quantity='" + getQuantity() + "'" +
-            ", price='" + getPrice() + "'" +
-            "}";
+        // return "Name: " + getName() + "      Quantity: " + getQuantity() + "      Price: " + getPrice();
+
+        String temp = "Name: " + getName() + "      Quantity: " + getQuantity() + "      Price: " + getPrice();
+
+        if(this instanceof Dairy) {
+            Dairy tempDairy = (Dairy) this;
+            return temp + "      Temperature: " +  tempDairy.getRefrigerationTemperature(); 
+        } else if (this instanceof Produce) {
+            Produce tempProduce = (Produce) this;
+            return temp + "      is organic: " + tempProduce.getIsOrganic();
+        }
+        else {
+            return "Nah";
+        }
     }
+
+
 
 
     @Override

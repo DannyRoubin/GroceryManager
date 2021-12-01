@@ -27,58 +27,58 @@ public class GroceryDriver {
 		System.out.println("******** Initial Inventory ********");
 		manager.displayInventory();
 
-		// purchase items
-		System.out.println("\n******** Processing Orders ********");
-		readOrders();
-		for (GroceryOrder<GroceryItem> order : orders) {
-			try {
-				manager.processOrder(order);
-			} catch (GroceryException e) {
-				System.out.println(e.getMessage());
-			}
-		}
-		manager.displayInventory();
+	// 	// purchase items
+	// 	System.out.println("\n******** Processing Orders ********");
+	// 	readOrders();
+	// 	for (GroceryOrder<GroceryItem> order : orders) {
+	// 		try {
+	// 			manager.processOrder(order);
+	// 		} catch (GroceryException e) {
+	// 			System.out.println(e.getMessage());
+	// 		}
+	// 	}
+	// 	manager.displayInventory();
 
-		// sort inventory
-		manager.sortInventoryByName();
-		System.out.println("\n******** Sort by name ********");
-		manager.displayInventory();
+	// 	// sort inventory
+	// 	manager.sortInventoryByName();
+	// 	System.out.println("\n******** Sort by name ********");
+	// 	manager.displayInventory();
 
-		manager.sortInventoryByPrice();
-		System.out.println("\n******** Sort by price ********");
-		manager.displayInventory();
+	// 	manager.sortInventoryByPrice();
+	// 	System.out.println("\n******** Sort by price ********");
+	// 	manager.displayInventory();
 
-		System.out.println("\n********  Restocking List ********");
-		manager.displayReorders();
-	}
+	// 	System.out.println("\n********  Restocking List ********");
+	// 	manager.displayRestockingList();
+	// }
 
-	public static void readOrders() {
-		Scanner input = null;
-		String line;
-		String[] parts;
-		try {
-			input = new Scanner(new FileInputStream("groceryOrders.txt"));
+	// public static void readOrders() {
+	// 	Scanner input = null;
+	// 	String line;
+	// 	String[] parts;
+	// 	try {
+	// 		input = new Scanner(new FileInputStream("groceryOrders.txt"));
 
-			while (input.hasNext()) {
-				GroceryOrder<GroceryItem> list = new GroceryOrder<>();
-				input.nextLine();// ORDER
-				line = input.nextLine();
-				parts = line.split(" ");
-				list.add(new Dairy(parts[1], Integer.parseInt(parts[2]), 0, 0));
-				line = input.nextLine();
-				parts = line.split(" ");
-				list.add(new Produce(parts[1], Integer.parseInt(parts[2]), 0, false));
-				line = input.nextLine();
-				parts = line.split(" ");
-				list.add(new Meat(parts[1], Integer.parseInt(parts[2]), 0, false));
+	// 		while (input.hasNext()) {
+	// 			GroceryOrder<GroceryItem> list = new GroceryOrder<>();
+	// 			input.nextLine();// ORDER
+	// 			line = input.nextLine();
+	// 			parts = line.split(" ");
+	// 			list.add(new Dairy(parts[1], Integer.parseInt(parts[2]), 0, 0));
+	// 			line = input.nextLine();
+	// 			parts = line.split(" ");
+	// 			list.add(new Produce(parts[1], Integer.parseInt(parts[2]), 0, false));
+	// 			line = input.nextLine();
+	// 			parts = line.split(" ");
+	// 			list.add(new Meat(parts[1], Integer.parseInt(parts[2]), 0, false));
 
-				orders.add(list);
+	// 			orders.add(list);
 
-			}
-		} catch (Exception e) {
-			System.out.println(e);
-		} finally {
-			input.close();
-		}
+	// 		}
+	// 	} catch (Exception e) {
+	// 		System.out.println(e);
+	// 	} finally {
+	// 		input.close();
+	// 	}
 	}
 }
