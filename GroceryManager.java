@@ -1,3 +1,11 @@
+/*
+Name: Danny Roubin
+Class: CSS 143 Sec B
+Assignment: Grocery Manager assignment
+
+Purpose of this file/class is to act as a grocery manager where it loads inventory in,
+checks inventory count, restocks, and any other tasks a real grocery manager would take care of.
+*/
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;

@@ -1,3 +1,11 @@
+/*
+Name: Danny Roubin
+Class: CSS 143 Sec B
+Assignment: Grocery Manager assignment
+
+Purpose of this file/class is to be the parent class for dairy, produce, and meat classes.
+This class will create a grocery item which will be extended by one of its subclasses
+*/
 public abstract class GroceryItem implements Comparable {
     protected String name;
     protected int quantity;

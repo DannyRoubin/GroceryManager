@@ -1,3 +1,10 @@
+/*
+Name: Danny Roubin
+Class: CSS 143 Sec B
+Assignment: Grocery Manager assignment
+
+Purpose of this file/class is to be a driver to make sure all methods are working as intended
+*/
 
 /*
 * CSS 143 Final Assignment: Grocery Manager

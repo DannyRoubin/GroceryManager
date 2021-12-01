@@ -1,3 +1,10 @@
+/*
+Name: Danny Roubin
+Class: CSS 143 Sec B
+Assignment: Grocery Manager assignment
+
+Purpose of this file/class is to be a subclass of grocery item for dairy products
+*/
 public class Dairy extends GroceryItem {
     private int refrigerationTemperature;
 
