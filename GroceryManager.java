@@ -21,15 +21,16 @@ public class GroceryManager {
                 Dairy newDairy = new Dairy(S.nextLine());
                 inventory.add(newDairy);
             }
-            // System.out.println(inventory);
-            // System.out.println("");
-            // System.out.println("-----------------------");
             
             for (int i = 0; i < ProduceCount; i++) {
                 Produce newProduce = new Produce(S.nextLine());
                 inventory.add(newProduce);
             }
-            // System.out.println(inventory);
+            
+            for (int i = 0; i < MeatCount; i++) {
+                Meat newMeat = new Meat(S.nextLine());
+                inventory.add(newMeat);
+            }
 
 
         }

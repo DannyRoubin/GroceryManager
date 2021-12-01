@@ -52,7 +52,10 @@ public abstract class GroceryItem implements Comparable {
             return temp + "      Temperature: " +  tempDairy.getRefrigerationTemperature(); 
         } else if (this instanceof Produce) {
             Produce tempProduce = (Produce) this;
-            return temp + "      is organic: " + tempProduce.getIsOrganic();
+            return temp + "      Organic: " + tempProduce.getIsOrganic();
+        } else if( this instanceof Meat) {
+            Meat tempMeat = (Meat) this;
+            return temp + "      Ground: " + tempMeat.getIsGround();
         }
         else {
             return "Nah";
