@@ -11,10 +11,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class GroceryManager {
     private ArrayList<GroceryItem> inventory = new ArrayList<GroceryItem>();
+    public HashSet <String> restockingList = new HashSet<String>();
 
     public void loadInventory(String fileName) {
         Scanner S = null;
@@ -61,7 +64,7 @@ public class GroceryManager {
                         inventory.get(j).setQuantity(inventory.get(j).getQuantity() - order.get(i).getQuantity());
                         if (inventory.get(j).getQuantity() <= 0) {
                             inventory.get(j).setQuantity(0);
-                            // add to restock list
+                            restockingList.add(inventory.get(j).getName());
                             // throw new GroceryException("out of " + inventory.get(j).getName());
                             System.out.println("out of " + inventory.get(j).getName());
                         }
@@ -92,6 +95,14 @@ public class GroceryManager {
             }
         }
         return null;
+    }
+
+    public void displayRestockingList() {
+        Iterator itr = restockingList.iterator();
+
+		while (itr.hasNext()) {
+			System.out.println(itr.next());
+		}
     }
 
     public void displayInventory() {

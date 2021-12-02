@@ -47,7 +47,7 @@ public class GroceryDriver {
 				System.out.println(e.getMessage());
 			}
 		}
-		manager.displayInventory();
+		
 
 	// 	// sort inventory
 	// 	manager.sortInventoryByName();
@@ -58,8 +58,8 @@ public class GroceryDriver {
 	// 	System.out.println("\n******** Sort by price ********");
 	// 	manager.displayInventory();
 
-	// 	System.out.println("\n********  Restocking List ********");
-	// 	manager.displayRestockingList();
+		System.out.println("\n********  Restocking List ********");
+		manager.displayRestockingList();
 	}
 
 	public static void readOrders() {
