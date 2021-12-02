@@ -84,6 +84,16 @@ public class GroceryManager {
 
     }
 
+
+    public GroceryItem findItemByName(String name) {
+        for (int i = 0; i < inventory.size(); i++) {
+            if(inventory.get(i).getName().compareTo(name) == 0) {
+                return inventory.get(i);
+            }
+        }
+        return null;
+    }
+
     public void displayInventory() {
         for (int i = 0; i < inventory.size(); i++) {
 
