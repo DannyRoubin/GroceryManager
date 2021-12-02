@@ -66,7 +66,7 @@ public abstract class GroceryItem implements Comparable {
             return temp + "      Ground: " + tempMeat.getIsGround();
         }
         else {
-            return "Nah";
+            return null;
         }
     }
 
