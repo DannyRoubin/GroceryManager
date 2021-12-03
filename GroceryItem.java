@@ -51,8 +51,6 @@ public abstract class GroceryItem implements Comparable {
 
     @Override
     public String toString() {
-        // return "Name: " + getName() + "      Quantity: " + getQuantity() + "      Price: " + getPrice();
-
         String temp = "Name: " + getName() + "      Quantity: " + getQuantity() + "      Price: " + getPrice();
 
         if(this instanceof Dairy) {
@@ -66,7 +64,7 @@ public abstract class GroceryItem implements Comparable {
             return temp + "      Ground: " + tempMeat.getIsGround();
         }
         else {
-            return null;
+            return temp;
         }
     }
 

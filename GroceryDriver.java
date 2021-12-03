@@ -54,9 +54,9 @@ public class GroceryDriver {
 		System.out.println("\n******** Sort by name ********");
 		manager.displayInventory();
 
-	// 	manager.sortInventoryByPrice();
-	// 	System.out.println("\n******** Sort by price ********");
-	// 	manager.displayInventory();
+		manager.sortInventoryByPrice();
+		System.out.println("\n******** Sort by price ********");
+		manager.displayInventory();
 
 		System.out.println("\n********  Restocking List ********");
 		manager.displayRestockingList();

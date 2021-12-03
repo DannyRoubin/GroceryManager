@@ -112,6 +112,16 @@ public class GroceryManager {
     }
 
     public void sortInventoryByPrice() {
+        for(int i = 1; i <inventory.size(); i++) {
+            GroceryItem valAtIndex = inventory.get(i);
+            int prevIndex = i-1;
+            
+            while(prevIndex >= 0 && inventory.get(prevIndex).getPrice() > valAtIndex.getPrice()) {
+                inventory.set(prevIndex + 1, inventory.get(prevIndex)); 
+                prevIndex = prevIndex-1;
+            }
+            inventory.set(prevIndex+1, valAtIndex);
+        }
         
     }
 
