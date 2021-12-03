@@ -97,6 +97,24 @@ public class GroceryManager {
         return null;
     }
 
+    public void sortInventoryByName() {
+
+        for (int i = 0; i < (inventory.size() - 1); i++) {
+            for(int j = 0; j < (inventory.size() - 1 - i); j++) {
+                if(inventory.get(j).getName().compareTo(inventory.get(j+1).getName()) > 0) {
+                    GroceryItem temp = inventory.get(j);
+                    inventory.set(j, inventory.get(j+1));
+                    inventory.set(j+1, temp);
+                }
+            }
+        }
+
+    }
+
+    public void sortInventoryByPrice() {
+        
+    }
+
     public void displayRestockingList() {
         Iterator itr = restockingList.iterator();
 
