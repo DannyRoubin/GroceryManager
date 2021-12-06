@@ -26,13 +26,12 @@ public class Meat extends GroceryItem {
         }
     }
 
+    public void setIsGround(boolean isGround) {
+        this.isGround = isGround;
+    }
+
     public boolean getIsGround() {
         return this.isGround;
     }
-
-    public void setisGround(boolean isGround) {
-        this.isGround = isGround;
-    }
-    
     
 }

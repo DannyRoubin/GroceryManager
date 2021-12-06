@@ -12,7 +12,6 @@ public abstract class GroceryItem implements Comparable {
     protected double price;
 
     public GroceryItem(String name, int quantity, double price) {
-        // reminder for self to make checkpoints to check for valid data
         this.name = name;
         this.quantity = quantity;
         this.price = price;
@@ -23,31 +22,29 @@ public abstract class GroceryItem implements Comparable {
 
     }
 
-
-    public String getName() {
-        return this.name;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
 
-    public int getQuantity() {
-        return this.quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public double getPrice() {
-        return this.price;
+    public String getName() {
+        return this.name;
     }
 
     public void setPrice(double price) {
         this.price = price;
     }
 
+    public double getPrice() {
+        return this.price;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public int getQuantity() {
+        return this.quantity;
+    }
 
     @Override
     public String toString() {

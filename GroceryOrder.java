@@ -8,6 +8,7 @@ but only allows items that are of type groceryItem in
 */
 import java.util.ArrayList;
 
+// making groceryOrder be an arraylist that can only contain items of time GroceryItem
 public class GroceryOrder <T extends GroceryItem> extends ArrayList <T> {
     
 }

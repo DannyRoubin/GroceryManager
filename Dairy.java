@@ -23,13 +23,12 @@ public class Dairy extends GroceryItem {
 
     }
 
+    public void setRefrigerationTemperature(int refrigerationTemperature) {
+        this.refrigerationTemperature = refrigerationTemperature;
+    }
 
     public int getRefrigerationTemperature() {
         return this.refrigerationTemperature;
-    }
-
-    public void setRefrigerationTemperature(int refrigerationTemperature) {
-        this.refrigerationTemperature = refrigerationTemperature;
     }
 
     

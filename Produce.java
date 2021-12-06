@@ -19,12 +19,12 @@ public class Produce extends GroceryItem {
         }
     }
 
-    public boolean getIsOrganic() {
-        return this.isOrganic;
-    }
-
     public void setIsOrganic(boolean isOrganic) {
         this.isOrganic = isOrganic;
+    }
+
+    public boolean getIsOrganic() {
+        return this.isOrganic;
     }
     
 }
