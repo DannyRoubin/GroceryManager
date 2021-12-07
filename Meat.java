@@ -33,5 +33,12 @@ public class Meat extends GroceryItem {
     public boolean getIsGround() {
         return this.isGround;
     }
+
+    public String toString() {
+        String temp = super.toString();
+        String temp2 = String.format("Ground: %-15s ", getIsGround());
+        return temp + temp2;
+    }
+    
     
 }

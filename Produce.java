@@ -26,5 +26,11 @@ public class Produce extends GroceryItem {
     public boolean getIsOrganic() {
         return this.isOrganic;
     }
+
+    public String toString() {
+        String temp = super.toString();
+        String temp2 = String.format("Organic: %-15s ", getIsOrganic());
+        return temp + temp2;
+    }
     
 }

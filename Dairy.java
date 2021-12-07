@@ -31,5 +31,11 @@ public class Dairy extends GroceryItem {
         return this.refrigerationTemperature;
     }
 
+    public String toString() {
+        String temp = super.toString();
+        String temp2 = String.format("Temperature: %-15s ", getRefrigerationTemperature());
+        return temp + temp2;
+    }
+
     
 }
