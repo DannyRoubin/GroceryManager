@@ -22,6 +22,7 @@ import java.util.Scanner;
 * Driver for Grocery Manager:  Read files, process orders, sort and print results
 */
 public class GroceryDriver {
+	// arraylist that holds grocerOrders
 	static ArrayList<GroceryOrder<GroceryItem>> orders = new ArrayList<>();
 
 	public static void main(String[] args) {
@@ -29,20 +30,21 @@ public class GroceryDriver {
 
 		// stock store
 
+		// stocks the store by passing the filename into loadInventory
 		manager.loadInventory("groceryInventory.txt");
 
 		System.out.println("******** Initial Inventory ********");
+		// prints out the inventory
 		manager.displayInventory();
 
 		// purchase items
 		System.out.println("\n******** Processing Orders ********");
+		// 
 		readOrders();
-		// int counter = 1;
+		// for each order, have the manager process the order
 		for (GroceryOrder<GroceryItem> order : orders) {
 			try {
-				// System.out.println("Order " + counter);
 				manager.processOrder(order);
-				// counter++;
 			} catch (GroceryException e) {
 				System.out.println(e.getMessage());
 			}
@@ -50,18 +52,22 @@ public class GroceryDriver {
 		
 
 		// sort inventory
+		// sorts the inventory by name
 		manager.sortInventoryByName();
 		System.out.println("\n******** Sort by name ********");
 		manager.displayInventory();
 
+		// sort inventory by price
 		manager.sortInventoryByPrice();
 		System.out.println("\n******** Sort by price ********");
 		manager.displayInventory();
 
 		System.out.println("\n********  Restocking List ********");
+		// displays the restocking list
 		manager.displayRestockingList();
 	}
 
+	// populates the araylist (groceryOrder) with orders read from files 
 	public static void readOrders() {
 		Scanner input = null;
 		String line;

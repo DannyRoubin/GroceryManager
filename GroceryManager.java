@@ -52,6 +52,8 @@ public class GroceryManager {
 
         } catch (FileNotFoundException e) {
             e.getMessage();
+        } finally {
+            S.close();
         }
     }
 
