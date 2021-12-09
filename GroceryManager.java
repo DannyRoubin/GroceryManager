@@ -1,5 +1,6 @@
 
 /*
+
 Name: Danny Roubin
 Class: CSS 143 Sec B
 Assignment: Grocery Manager assignment

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch GroceryDriver",
+            "request": "launch",
+            "mainClass": "GroceryDriver",
+            "projectName": "GroceryManager_ac5cc00e"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
