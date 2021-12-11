@@ -39,7 +39,7 @@ public class GroceryDriver {
 
 		// purchase items
 		System.out.println("\n******** Processing Orders ********");
-		// 
+		//
 		readOrders();
 		// for each order, have the manager process the order
 		for (GroceryOrder<GroceryItem> order : orders) {
@@ -49,7 +49,7 @@ public class GroceryDriver {
 				System.out.println(e.getMessage());
 			}
 		}
-		
+		manager.displayInventory();
 
 		// sort inventory
 		// sorts the inventory by name
@@ -67,7 +67,7 @@ public class GroceryDriver {
 		manager.displayRestockingList();
 	}
 
-	// populates the araylist (groceryOrder) with orders read from files 
+	// populates the araylist (groceryOrder) with orders read from files
 	public static void readOrders() {
 		Scanner input = null;
 		String line;
